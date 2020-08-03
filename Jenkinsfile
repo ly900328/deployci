@@ -1,4 +1,4 @@
-Jenkinsfile (Scripted Pipeline)
+// Jenkinsfile (Scripted Pipeline)
 /* 需要Docker Pipeline插件 */
 node('docker') {
     checkout scm
