@@ -1,6 +1,5 @@
-// Jenkinsfile (Scripted Pipeline)
+// Jenkinsfile (Declarative Pipeline)
 /* 需要Docker Pipeline插件 */
-Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent any
     stages {
