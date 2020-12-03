@@ -1,6 +1,6 @@
 // Jenkinsfile (Scripted Pipeline)
 /* 需要Docker Pipeline插件 */
-node('docker') {
+node('docker_agent') {
     checkout scm
     stage('Build') {
         docker.image('jenkins/slave:latest').inside {
