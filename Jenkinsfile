@@ -1,10 +1,17 @@
 // Jenkinsfile (Scripted Pipeline)
 /* 需要Docker Pipeline插件 */
-node('master') {
-    checkout scm
-    stage('Build') {
-        docker.image('jenkins/slave:latest').inside {
-            sh 'python --version'
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+            }
         }
     }
 }
