@@ -3,7 +3,7 @@
 node('docker-1') {
     checkout scm
     stage('Build') {
-        docker.image('python:3.5.1').inside {
+        docker.image('jenkins/slave:latest').inside {
             sh 'python --version'
         }
     }
